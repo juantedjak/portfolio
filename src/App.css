@@ -1,38 +1,170 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  width: 100vw;
   min-height: 100vh;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+}
+
+.col {
+  height: 100%;
+}
+
+.main {
+  width: 92vw;
+  height: 88vh;
+  padding: 6vh 4vw;
+  background-color: #141414;
+  color: #fafafa;
+}
+
+.main-title {
+  font-size: 8vmax;
+}
+
+.main-subtitle {
+  font-size: 3vmax;
+  margin-bottom: 2vh;
+}
+
+.main-left-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5vw;
+  position: relative;
+}
+
+.main-left-col::before {
+  padding: 0;
+  margin: 0;
+  content: "";
+  width: 15vw;
+  height: 1vw;
+  background: linear-gradient(to right, #2f54eb, #eb2f96);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 2vw;
+}
+
+.main-left-col::after {
+  padding: 0;
+  margin: 0;
+  content: "";
+  width: 1vw;
+  height: 15vw;
+  background: linear-gradient(to bottom, #2f54eb, #eb2f96);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 2vw;
+}
+
+.main-self-description {
+  text-align: justify;
+  font-size: 1vmax;
+  border-width: 0.3vw;
+  border-style: solid;
+  border-image: linear-gradient(to bottom, #2f54eb, #eb2f96) 1 100%;
+  border-right: 0;
+  padding-left: 1vw;
+}
+
+.main-middle-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-projects-container {
+  padding: 3.5vh 2vw;
+  position: relative;
+}
+
+.main-projects-container::before {
+  padding: 0;
+  margin: 0;
+  content: "";
+  width: 5vw;
+  height: 0.3vw;
+  background: linear-gradient(to right, #2f54eb, #eb2f96);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 2vw;
+}
+
+.main-projects-container::after {
+  padding: 0;
+  margin: 0;
+  content: "";
+  width: 0.3vw;
+  height: 5vw;
+  background: linear-gradient(to bottom, #2f54eb, #eb2f96);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 2vw;
+}
+
+.project-button {
+  all: unset;
+  cursor: pointer;
+}
+
+.main-projects {
+  width: fit-content;
+  border-width: 0.2vw;
+  border-style: solid;
+  border-image: linear-gradient(to right, #2f54eb, #eb2f96) 100% 1;
+  border-top: 0;
+  margin-bottom: 3vh;
+}
+
+.main-right-col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.main-right-col::before {
+  padding: 0;
+  margin: 0;
+  content: "";
+  width: 15vw;
+  height: 1vw;
+  background: linear-gradient(to right, #2f54eb, #eb2f96);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 2vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-right-col::after {
+  padding: 0;
+  margin: 0;
+  content: "";
+  width: 1vw;
+  height: 15vw;
+  background: linear-gradient(to bottom, #2f54eb, #eb2f96);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 2vw;
+}
+
+.main-icons-container {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.icon-button {
+  all: unset;
+  cursor: pointer;
+  color: #fafafa;
 }
