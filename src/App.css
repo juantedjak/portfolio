@@ -110,9 +110,10 @@
   border-radius: 2vw;
 }
 
-.project-button {
+.main-project-button {
   all: unset;
   cursor: pointer;
+  margin-bottom: 3vh;
 }
 
 .main-projects {
@@ -121,7 +122,6 @@
   border-style: solid;
   border-image: linear-gradient(to right, #2f54eb, #eb2f96) 100% 1;
   border-top: 0;
-  margin-bottom: 3vh;
 }
 
 .main-right-col {
@@ -163,7 +163,7 @@
   justify-content: space-between;
 }
 
-.icon-button {
+.main-icon-button {
   all: unset;
   cursor: pointer;
   color: #fafafa;

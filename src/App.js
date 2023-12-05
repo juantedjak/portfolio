@@ -31,38 +31,36 @@ function App() {
           <Col span={6} className="col main-middle-col">
             <div className="main-subtitle">Projects</div>
             <div className="main-projects-container">
-              <Button type="link" className="project-button">
+              <Button type="link" className="main-project-button">
                 <div className="main-projects">
                   Banking Terminal Management System
                 </div>
               </Button>
-              <Button type="link" className="project-button">
+              <Button type="link" className="main-project-button">
                 <div className="main-projects">Banking Queue Form</div>
               </Button>
-              <Button type="link" className="project-button">
+              <Button type="link" className="main-project-button">
                 <div className="main-projects">
                   Queue Management System (TV Display)
                 </div>
               </Button>
-              <Button type="link" className="project-button">
+              <Button type="link" className="main-project-button">
                 <div className="main-projects">
                   Banking Form Management System
                 </div>
               </Button>
               <Button
                 type="link"
-                className="project-button"
+                className="main-project-button"
                 onClick={() => {
                   window.location.href =
                     "https://ieeexplore.ieee.org/document/10127723";
                 }}
               >
-                <div className="main-projects" style={{ marginBottom: 0 }}>
+                <div className="main-projects">
                   Web Based Inventory Management System
                 </div>
-                <div className="main-projects" style={{ marginBottom: 0 }}>
-                  With Predictive Modelling
-                </div>
+                <div className="main-projects">With Predictive Modelling</div>
               </Button>
             </div>
           </Col>
@@ -70,7 +68,7 @@ function App() {
             <div className="main-icons-container">
               <Button
                 type="link"
-                className="icon-button"
+                className="main-icon-button"
                 icon={
                   <MailOutlined
                     style={{ fontSize: "2vmax" }}
@@ -82,7 +80,7 @@ function App() {
               />
               <Button
                 type="link"
-                className="icon-button"
+                className="main-icon-button"
                 icon={
                   <GithubOutlined
                     style={{ fontSize: "2vmax" }}
@@ -94,7 +92,7 @@ function App() {
               />
               <Button
                 type="link"
-                className="icon-button"
+                className="main-icon-button"
                 icon={
                   <LinkedinOutlined
                     style={{ fontSize: "2vmax" }}
