@@ -169,3 +169,13 @@
   cursor: pointer;
   color: #fafafa;
 }
+
+.modal-summary-title {
+  margin-top: 1vh;
+  font-size: 1vmax;
+  font-weight: 600;
+}
+
+.modal-summary-content {
+  font-size: 0.9vmax;
+}
