@@ -28,7 +28,7 @@ function App() {
               </div>
             </div>
           </Col>
-          <Col span={6} className="col main-middle-col">
+          <Col span={7} className="col main-middle-col">
             <div className="main-subtitle">Projects</div>
             <div className="main-projects-container">
               <Button type="link" className="main-project-button">
@@ -64,7 +64,7 @@ function App() {
               </Button>
             </div>
           </Col>
-          <Col span={4} className="col main-right-col">
+          <Col span={3} className="col main-right-col">
             <div className="main-icons-container">
               <Button
                 type="link"

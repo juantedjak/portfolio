@@ -122,6 +122,7 @@
   border-style: solid;
   border-image: linear-gradient(to right, #2f54eb, #eb2f96) 100% 1;
   border-top: 0;
+  font-size: 1vmax;
 }
 
 .main-right-col {
@@ -159,8 +160,8 @@
 
 .main-icons-container {
   display: flex;
-  width: 50%;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .main-icon-button {
