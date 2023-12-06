@@ -21,7 +21,7 @@
 }
 
 .main-title {
-  font-size: 8vmax;
+  font-size: 6vmax;
 }
 
 .main-subtitle {
@@ -65,7 +65,7 @@
 
 .main-self-description {
   text-align: justify;
-  font-size: 1vmax;
+  font-size: 1.05vmax;
   border-width: 0.3vw;
   border-style: solid;
   border-image: linear-gradient(to bottom, #2f54eb, #eb2f96) 1 100%;

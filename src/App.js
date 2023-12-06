@@ -6,6 +6,7 @@ import {
   LinkedinOutlined,
 } from "@ant-design/icons";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import "./App.css";
 import ModalFirstProject from "./components/modals/ModalFirstProject";
 import ModalSecondProject from "./components/modals/ModalSecondProject";
@@ -63,13 +64,27 @@ function App() {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 2 }}
               >
-                <div className="main-title">Welcome.</div>
+                <TypeAnimation
+                  sequence={[
+                    "Juan",
+                    1000,
+                    "Juan Tedja",
+                    1000,
+                    "Juan Kusmana",
+                    1000,
+                    "Juan Tedja K.",
+                    1000,
+                  ]}
+                  speed={50}
+                  repeat={Infinity}
+                  className="main-title"
+                />
                 <div className="main-self-description">
                   <div style={{ marginBottom: "1vh" }}>
-                    My name is Juan Tedja Kusmana. I'm a results-driven and
-                    passionate Computer Science graduate with a bachelor's
-                    degree and Summa Cum Laude honors. Proven expertise in IT
-                    support, web development, and front-end development.
+                    Results-driven and passionate Computer Science graduate with
+                    a bachelor's degree and Summa Cum Laude honors. Proven
+                    expertise in IT support, web development, and front-end
+                    development.
                   </div>
                   <div>
                     Currently employed as a Junior Front-end Developer at a
@@ -89,66 +104,95 @@ function App() {
               >
                 <div className="main-subtitle">Projects</div>
                 <div className="main-projects-container">
-                  <Button
-                    type="link"
-                    className="main-project-button"
-                    onClick={showFirstProjectModal}
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 2, delay: 0.1 }}
                   >
-                    <div className="main-projects">
-                      Banking Terminal Management System
-                    </div>
-                  </Button>
-                  <Button
-                    type="link"
-                    className="main-project-button"
-                    onClick={showSecondProjectModal}
+                    <Button
+                      type="link"
+                      className="main-project-button"
+                      onClick={showFirstProjectModal}
+                    >
+                      <div className="main-projects">
+                        Banking Terminal Management System
+                      </div>
+                    </Button>
+                  </motion.div>
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 2, delay: 0.4 }}
                   >
-                    <div className="main-projects">Banking Queue Form</div>
-                  </Button>
-                  <Button
-                    type="link"
-                    className="main-project-button"
-                    onClick={showThirdProjectModal}
+                    <Button
+                      type="link"
+                      className="main-project-button"
+                      onClick={showSecondProjectModal}
+                    >
+                      <div className="main-projects">Banking Queue Form</div>
+                    </Button>
+                  </motion.div>
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 2, delay: 0.7 }}
                   >
-                    <div className="main-projects">
-                      Queue Management System (TV Display)
-                    </div>
-                  </Button>
-                  <Button
-                    type="link"
-                    className="main-project-button"
-                    onClick={showFourthProjectModal}
+                    <Button
+                      type="link"
+                      className="main-project-button"
+                      onClick={showThirdProjectModal}
+                    >
+                      <div className="main-projects">
+                        Queue Management System (TV Display)
+                      </div>
+                    </Button>
+                  </motion.div>
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 2, delay: 1 }}
                   >
-                    <div className="main-projects">
-                      Banking Form Management System
-                    </div>
-                  </Button>
-                  <Button
-                    type="link"
-                    className="main-project-button"
-                    onClick={() => {
-                      window.location.href =
-                        "https://ieeexplore.ieee.org/document/10127723";
-                    }}
+                    <Button
+                      type="link"
+                      className="main-project-button"
+                      onClick={showFourthProjectModal}
+                    >
+                      <div className="main-projects">
+                        Banking Form Management System
+                      </div>
+                    </Button>
+                  </motion.div>
+                  <motion.div
+                    initial={{ x: -20, opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 2, delay: 1.3 }}
                   >
-                    <div className="main-projects">
-                      Web Based Inventory Management System
-                    </div>
-                    <div className="main-projects">
-                      With Predictive Modelling
-                    </div>
-                  </Button>
+                    <Button
+                      type="link"
+                      className="main-project-button"
+                      onClick={() => {
+                        window.location.href =
+                          "https://ieeexplore.ieee.org/document/10127723";
+                      }}
+                    >
+                      <div className="main-projects">
+                        Web Based Inventory Management System
+                      </div>
+                      <div className="main-projects">
+                        With Predictive Modelling
+                      </div>
+                    </Button>
+                  </motion.div>
                 </div>
               </motion.div>
             </Col>
             <Col span={3} className="col main-right-col">
-              <motion.div
-                initial={{ y: -20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 2 }}
-                style={{ width: "100%" }}
-              >
-                <div className="main-icons-container">
+              <div className="main-icons-container">
+                <motion.div
+                  initial={{ y: -20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 2, delay: 0.1 }}
+                >
                   <Button
                     type="link"
                     className="main-icon-button"
@@ -161,6 +205,12 @@ function App() {
                       />
                     }
                   />
+                </motion.div>
+                <motion.div
+                  initial={{ y: -20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 2, delay: 0.4 }}
+                >
                   <Button
                     type="link"
                     className="main-icon-button"
@@ -174,6 +224,12 @@ function App() {
                       />
                     }
                   />
+                </motion.div>
+                <motion.div
+                  initial={{ y: -20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 2, delay: 0.7 }}
+                >
                   <Button
                     type="link"
                     className="main-icon-button"
@@ -187,8 +243,8 @@ function App() {
                       />
                     }
                   />
-                </div>
-              </motion.div>
+                </motion.div>
+              </div>
             </Col>
           </Row>
         </div>
