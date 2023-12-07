@@ -47,7 +47,6 @@ function App() {
         components: {
           Button: {
             colorLinkHover: "#f759ab",
-            colorLinkActive: "#c41d7f",
           },
           Modal: {
             titleFontSize: "1.2vmax",
