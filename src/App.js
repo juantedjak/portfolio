@@ -5,6 +5,7 @@ import {
   GithubOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
+import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import "./App.css";
@@ -14,6 +15,8 @@ import ModalThirdProject from "./components/modals/ModalThirdProject";
 import ModalFourthProject from "./components/modals/ModalFourthProject";
 
 function App() {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+
   // First Project Modal
   const [openFirstProject, setOpenFirstProject] = useState(false);
   const showFirstProjectModal = () => {
@@ -47,9 +50,12 @@ function App() {
         components: {
           Button: {
             colorLinkHover: "#f759ab",
+            colorLinkActive: "#c41d7f",
+            colorPrimaryBorder: "transparent",
           },
           Modal: {
             titleFontSize: "1.2vmax",
+            ...(isPortrait && { titleFontSize: "2vmax" }),
           },
         },
       }}
@@ -57,7 +63,7 @@ function App() {
       <div className="App">
         <div className="main">
           <Row className="row">
-            <Col span={14} className="col main-left-col">
+            <Col span={isPortrait ? 24 : 14} className="col main-left-col">
               <motion.div
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -95,7 +101,7 @@ function App() {
                 </div>
               </motion.div>
             </Col>
-            <Col span={7} className="col main-middle-col">
+            <Col span={isPortrait ? 24 : 7} className="col main-middle-col">
               <motion.div
                 initial={{ x: 20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -185,7 +191,7 @@ function App() {
                 </div>
               </motion.div>
             </Col>
-            <Col span={3} className="col main-right-col">
+            <Col span={isPortrait ? 24 : 3} className="col main-right-col">
               <div className="main-icons-container">
                 <motion.div
                   initial={{ y: -20, opacity: 0 }}
@@ -197,7 +203,11 @@ function App() {
                     className="main-icon-button"
                     icon={
                       <MailOutlined
-                        style={{ fontSize: "2vmax" }}
+                        style={
+                          isPortrait
+                            ? { fontSize: "3vmax" }
+                            : { fontSize: "2vmax" }
+                        }
                         onClick={() => {
                           window.location.href = "mailto:juantedjak@gmail.com";
                         }}
@@ -215,7 +225,11 @@ function App() {
                     className="main-icon-button"
                     icon={
                       <GithubOutlined
-                        style={{ fontSize: "2vmax" }}
+                        style={
+                          isPortrait
+                            ? { fontSize: "3vmax" }
+                            : { fontSize: "2vmax" }
+                        }
                         onClick={() => {
                           window.location.href =
                             "https://github.com/juantedjak";
@@ -234,7 +248,11 @@ function App() {
                     className="main-icon-button"
                     icon={
                       <LinkedinOutlined
-                        style={{ fontSize: "2vmax" }}
+                        style={
+                          isPortrait
+                            ? { fontSize: "3vmax" }
+                            : { fontSize: "2vmax" }
+                        }
                         onClick={() => {
                           window.location.href =
                             "https://www.linkedin.com/in/juantedjak";

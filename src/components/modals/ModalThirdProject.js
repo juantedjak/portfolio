@@ -1,10 +1,14 @@
 import { Modal, Button } from "antd";
+import { useMediaQuery } from "react-responsive";
 import projectVideo from "../../assets/videos/third-project.mp4";
 
 const ModalThirdProject = ({ openThirdProject, setOpenThirdProject }) => {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+
   const handleCancel = () => {
     setOpenThirdProject(false);
   };
+
   return (
     <Modal
       title="Banking Queue Form"
@@ -12,6 +16,7 @@ const ModalThirdProject = ({ openThirdProject, setOpenThirdProject }) => {
       open={openThirdProject}
       centered={true}
       onCancel={handleCancel}
+      width={isPortrait ? "80vw" : "40vw"}
       footer={[
         <Button
           key="close"
@@ -22,7 +27,6 @@ const ModalThirdProject = ({ openThirdProject, setOpenThirdProject }) => {
           Close
         </Button>,
       ]}
-      width={"40vw"}
     >
       <video width={"100%"} controls>
         <source src={projectVideo} type="video/mp4" />

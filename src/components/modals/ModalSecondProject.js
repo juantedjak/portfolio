@@ -1,11 +1,15 @@
 import { Modal, Button, Image, Carousel } from "antd";
+import { useMediaQuery } from "react-responsive";
 import firstProjectImage from "../../assets/images/second-project-1.png";
 import secondProjectImage from "../../assets/images/second-project-2.png";
 
 const ModalSecondProject = ({ openSecondProject, setOpenSecondProject }) => {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+
   const handleCancel = () => {
     setOpenSecondProject(false);
   };
+
   return (
     <Modal
       title="Banking Queue Form"
@@ -13,6 +17,7 @@ const ModalSecondProject = ({ openSecondProject, setOpenSecondProject }) => {
       open={openSecondProject}
       centered={true}
       onCancel={handleCancel}
+      width={isPortrait ? "80vw" : "40vw"}
       footer={[
         <Button
           key="close"
@@ -23,7 +28,6 @@ const ModalSecondProject = ({ openSecondProject, setOpenSecondProject }) => {
           Close
         </Button>,
       ]}
-      width={"40vw"}
     >
       <Carousel>
         <Image src={firstProjectImage} />

@@ -1,16 +1,21 @@
 import { useState } from "react";
 import { Modal, Button, Image, Popover } from "antd";
 import { InfoOutlined } from "@ant-design/icons";
+import { useMediaQuery } from "react-responsive";
 import projectImage from "../../assets/images/first-project.jpg";
 
 const ModalFirstProject = ({ openFirstProject, setOpenFirstProject }) => {
+  const isPortrait = useMediaQuery({ query: "(orientation: portrait)" });
+
   const [openPopover, setOpenPopover] = useState(false);
   const handleOpenChange = (newOpen) => {
     setOpenPopover(newOpen);
   };
+
   const handleCancel = () => {
     setOpenFirstProject(false);
   };
+
   return (
     <Modal
       title="Banking Terminal Management System"
@@ -18,6 +23,7 @@ const ModalFirstProject = ({ openFirstProject, setOpenFirstProject }) => {
       open={openFirstProject}
       centered={true}
       onCancel={handleCancel}
+      width={isPortrait ? "80vw" : "40vw"}
       footer={[
         <Popover
           key="note"
@@ -52,7 +58,6 @@ const ModalFirstProject = ({ openFirstProject, setOpenFirstProject }) => {
           Close
         </Button>,
       ]}
-      width={"40vw"}
     >
       <Image src={projectImage} />
       <div className="modal-summary-title">Summary:</div>
